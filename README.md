@@ -22,3 +22,7 @@
 
   # run the script
     ./enable-manager.sh
+
+
+
+# The script is developed by PRABHAT RAGHAV (https://github.com/prabhatraghav/tomcat-install)
