@@ -13,6 +13,8 @@
   # Run the script
     ./tomcat-install.sh
 
+# Please read the instructions echo on the screen at the end of script, and save the passwords.
+
 # NOW, AFTER INSTALL ENABLE THE TOMCAT MANAGER
 
   # Download the enable-manager.sh
@@ -24,6 +26,11 @@
   # Run the script
     ./enable-manager.sh
 
+# Use the command to start the Tomcat
+  tomcat-up
 
+# Use the command to stop the Tomcat
+  tomcat-down
 
+  
 # The script is developed by PRABHAT RAGHAV (https://github.com/prabhatraghav/tomcat-install)
