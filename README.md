@@ -3,7 +3,7 @@
   # Download the tomcat-install.sh
     wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/tomcat-install.sh
 
-  #The Tomcat install script can be run as it is, which is set to install Tomcat Version 10.0.18 (on port 8080) with Java version 17 as a default settings, or you can make the necessary chages as per your requirements. To make changes, edit the tomcat-install.sh script, and set the desiserd tomcat install ENVIR like (TOMCAT_VERSION, TOMCAT_USER_PASS, TOMCAT_MANAGER_PASS, CUSTOM_TOMCAT_PORT, CUSTOM_JDK_VERSION etc.) and save the file.
+  #The Tomcat install script can be run as it is, which is set to install Tomcat Version 10.0.18 (on port 8080) with Java version 17 as a default settings, or you can make the necessary chages as per your requirements. To make changes, edit the "tomcat-install.sh" script, and set the desiserd tomcat install ENVIR like (TOMCAT_VERSION, TOMCAT_USER_PASS, TOMCAT_MANAGER_PASS, CUSTOM_TOMCAT_PORT, CUSTOM_JDK_VERSION etc.) and save the file.
   
   # Edit the script (Skip this step if you want to install with default settings)
     nano tomcat-install.sh
@@ -14,7 +14,9 @@
   # Run the script
     ./tomcat-install.sh
 
-# Please read the instructions echo on the screen at the end of script, and save the passwords.
+#Please read the instructions echo on the screen at the end of script, and save the passwords.
+
+
 
 # NOW, AFTER INSTALL ENABLE THE TOMCAT MANAGER
 
