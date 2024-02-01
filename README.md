@@ -1,4 +1,6 @@
-# FIRST, INSTALL THE TOMCAT SERVER
+The shell script for the installation of Tomcat Server on Ubuntu.
+
+# 1st Step: INSTALL THE TOMCAT SERVER
 
   # Download the tomcat-install.sh
     wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/tomcat-install.sh
@@ -18,7 +20,7 @@
 
 
 
-# NOW, AFTER INSTALL ENABLE THE TOMCAT MANAGER
+# 2nd Step: ENABLE THE TOMCAT MANAGER
 
   # Download the enable-manager.sh
     wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/enable-manager.sh
