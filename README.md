@@ -38,4 +38,5 @@
     tomcat-down
 
   
-This script is developed by PRABHAT RAGHAV prabhat_raghav@outlook.com (https://github.com/prabhatraghav/tomcat-install)
+This script is developed by PRABHAT RAGHAV prabhat_raghav@outlook.com
+(https://github.com/prabhatraghav/tomcat-install)
