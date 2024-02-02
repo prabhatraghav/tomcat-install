@@ -2,7 +2,7 @@
 
 # Apache Tomcat Installation Script for Ubuntu 22.04
 
-LINUX_PKGMNGR="apt"
+LINUX_PKGMNGR="yum"
 TOMCAT_VERSION="10.0.18"  # Update the version as needed
 TOMCAT_DIR="/opt/tomcat"
 TOMCAT_USER="tomcat"
