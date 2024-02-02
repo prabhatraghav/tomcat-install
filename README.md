@@ -1,6 +1,6 @@
 # The shell script for the installation of Tomcat Server on Ubuntu/Debian
 
-# 1st Step: INSTALL THE TOMCAT SERVER
+# Run the below commands step-wise one-by-one to install the Tomcat Server
 
   # 1. Become the root
     sudo su
