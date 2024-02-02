@@ -102,9 +102,11 @@ fi
 echo "To start Tomcat, run: tomcat-up"
 echo "To stop Tomcat, run: tomcat-down"
 
+exit
 
 # To enable Tomcat Manager, replacing the context.xml files
 sudo su
 wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/enable-manager.sh
 chmod +x enable-manager.sh
 ./enable-manager.sh
+exit
