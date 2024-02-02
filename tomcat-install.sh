@@ -87,22 +87,22 @@ rm /tmp/apache-tomcat-${TOMCAT_VERSION}.tar.gz
 sudo su
 
 # To enable Tomcat Manger, replacing the context.xml files
-cd /opt/tomcat/webapps/manager/META-INF
-mv context.xml backup.context.xml
-wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/manager.xml
-mv manager.xml context.xml
-cd /opt/tomcat/webapps/host-manager/META-INF
-mv context.xml backup.context.xml
-wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/host-manager.xml
-mv host-manager.xml context.xml
-cd /opt/tomcat/webapps/examples/META-INF
-mv context.xml backup.context.xml
-wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/examples.xml
-mv examples.xml context.xml
-cd /opt/tomcat/webapps/docs/META-INF
-mv context.xml backup.context.xml
-wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/docs.xml
-mv docs.xml context.xml
+sudo cd /opt/tomcat/webapps/manager/META-INF
+sudo mv context.xml backup.context.xml
+sudo wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/manager.xml
+sudo mv manager.xml context.xml
+sudo cd /opt/tomcat/webapps/host-manager/META-INF
+sudo mv context.xml backup.context.xml
+sudo wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/host-manager.xml
+sudo mv host-manager.xml context.xml
+sudo cd /opt/tomcat/webapps/examples/META-INF
+sudo mv context.xml backup.context.xml
+sudo wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/examples.xml
+sudo mv examples.xml context.xml
+sudo cd /opt/tomcat/webapps/docs/META-INF
+sudo mv context.xml backup.context.xml
+sudo wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/docs.xml
+sudo mv docs.xml context.xml
 
 # Print instructions
 echo "Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
