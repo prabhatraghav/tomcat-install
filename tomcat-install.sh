@@ -83,28 +83,6 @@ sudo chmod +x /usr/local/bin/tomcat-down
 # Clean up
 rm /tmp/apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
-# To enable Tomcat Manger, replacing the context.xml files
-sudo cd /opt/tomcat/webapps/manager/META-INF
-sudo mv context.xml backup.context.xml
-sudo wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/manager.xml
-sudo mv manager.xml context.xml
-echo "Success: File copied to manager dir"
-sudo cd /opt/tomcat/webapps/host-manager/META-INF
-sudo mv context.xml backup.context.xml
-sudo wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/host-manager.xml
-sudo mv host-manager.xml context.xml
-echo "Success: File copied to host-manager dir"
-sudo cd /opt/tomcat/webapps/examples/META-INF
-sudo mv context.xml backup.context.xml
-sudo wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/examples.xml
-sudo mv examples.xml context.xml
-echo "Success: File copied to examples dir"
-sudo cd /opt/tomcat/webapps/docs/META-INF
-sudo mv context.xml backup.context.xml
-sudo wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/docs.xml
-sudo mv docs.xml context.xml
-echo "Success: File copied to docs dir"
-
 # Print instructions
 echo "Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
 echo "Tomcat Manager credentials:"
@@ -123,3 +101,10 @@ if [ -n "$TOMCAT_USER_PASS" ]; then
 fi
 echo "To start Tomcat, run: tomcat-up"
 echo "To stop Tomcat, run: tomcat-down"
+
+
+# To enable Tomcat Manager, replacing the context.xml files
+sudo su
+wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/enable-manager.sh
+chmod +x enable-manager.sh
+./enable-manager.sh
