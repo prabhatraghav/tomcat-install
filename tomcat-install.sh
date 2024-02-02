@@ -83,6 +83,7 @@ sudo chmod +x /usr/local/bin/tomcat-down
 # Clean up
 rm /tmp/apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
+# switch to root
 sudo su
 
 # To enable Tomcat Manger, replacing the context.xml files
