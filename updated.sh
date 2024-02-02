@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Apache Tomcat Installation Script for Ubuntu 22.04
+# Apache Tomcat Installation Script for Amazon Linux 2
 
-LINUX_PKGMNGR="yum"
 TOMCAT_VERSION="10.0.18"  # Update the version as needed
 TOMCAT_DIR="/opt/tomcat"
 TOMCAT_USER="tomcat"
@@ -11,7 +10,6 @@ TOMCAT_USER_PASS="tomcat@1"  # Set your desired password or leave empty
 TOMCAT_MANAGER_USER="admin"
 TOMCAT_MANAGER_PASS="admin@1"  # Change this to a secure password
 CUSTOM_TOMCAT_PORT=""       # Leave empty to use default port (8080)
-CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 
 # Backup function
 backup_file() {
@@ -24,14 +22,8 @@ backup_file() {
 }
 
 # Update and install prerequisites
-sudo $LINUX_PKGMNGR update
-
-# Install custom JDK if specified
-if [ -n "$CUSTOM_JDK_VERSION" ]; then
-    sudo $LINUX_PKGMNGR install -y openjdk-$CUSTOM_JDK_VERSION-jdk
-else
-    sudo $LINUX_PKGMNGR install -y default-jdk
-fi
+sudo yum update -y
+sudo amazon-linux-extras install java-openjdk11 -y
 
 # Create Tomcat user and group with password
 sudo groupadd $TOMCAT_GROUP
@@ -91,9 +83,6 @@ echo "   Username: $TOMCAT_MANAGER_USER"
 echo "   Password: $TOMCAT_MANAGER_PASS"
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
     echo "Tomcat is configured to run on port $CUSTOM_TOMCAT_PORT"
-fi
-if [ -n "$CUSTOM_JDK_VERSION" ]; then
-    echo "Custom JDK $CUSTOM_JDK_VERSION has been installed"
 fi
 echo "Tomcat user credentials:"
 echo "   Username: $TOMCAT_USER"
