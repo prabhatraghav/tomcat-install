@@ -2,7 +2,7 @@
 
 # Run the below commands step-wise one-by-one to install the Tomcat Server
 
-  # 1. Become the root
+  # 1. Become the root (mandatory)
     sudo su
   
   # 2. Change dir to /home
@@ -24,7 +24,7 @@
 
 # Please read the instructions carefully, echoed on the screen at the end of this script, and save the tomcat-user and manager passwords.
 
-# 6. Now, exit from the root is necessary
+# 6. Now, exit from the root is mandatory
     exit
 
 # 7. Use the command to start the Tomcat
