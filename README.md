@@ -24,7 +24,7 @@
 
 # Please read the instructions carefully, echoed on the screen at the end of this script, and save the tomcat-user and manager passwords.
 
-# 6. Now, exit from the root is mandatory
+# 6. Now, exit from the root is also mandatory
     exit
 
 # 7. Use the command to start the Tomcat
