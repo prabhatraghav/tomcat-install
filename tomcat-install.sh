@@ -13,7 +13,7 @@ CUSTOM_TOMCAT_PORT="8080"       # Leave empty to use default port (8080)
 CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 PUBLIC_IP_ADDR=`curl -s http://whatismyip.akamai.com/`
 LINE_BORDER_EQ="====================================================================="
-LINE_BORDER_SLASH="|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||"
+LINE_BORDER_SLASH="|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||"
 LINE_BORDER_HASH="######################################################################"
 
 # Backup function
@@ -97,19 +97,17 @@ sudo sh enable-manager.sh
 # Print instructions
 echo " "
 echo "$LINE_BORDER_SLASH"
-echo " "
 toilet -t -F gay RAGHAVs
-echo " "
 figlet -t Tomcat-Script
-echo " "
 echo "$LINE_BORDER_SLASH"
 echo " "
 echo "$LINE_BORDER_HASH"
-echo " "
-echo "_ _  _ ____ ___ ____ _  _ ____ ___ _ ____ _  _ ____ 
-| |\ | [__   |  |__/ |  | |     |  | |  | |\ | [__  
-| | \| ___]  |  |  \ |__| |___  |  | |__| | \| ___] "
-echo " "
+echo " _____          _                   _   _                 
+|_   _|        | |                 | | (_)                
+  | | _ __  ___| |_ _ __ _   _  ___| |_ _  ___  _ __  ___ 
+  | || '_ \/ __| __| '__| | | |/ __| __| |/ _ \| '_ \/ __|
+ _| || | | \__ \ |_| |  | |_| | (__| |_| | (_) | | | \__ \
+ \___/_| |_|___/\__|_|   \__,_|\___|\__|_|\___/|_| |_|___/"
 echo "$LINE_BORDER_HASH"
 echo " "
 echo "$LINE_BORDER_EQ"
