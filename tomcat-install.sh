@@ -113,6 +113,5 @@ echo "To stop Tomcat, run: tomcat-down"
 
 # Removing downloaded shell scripts from /home dir
 cd /home
-figlet -t Tomcat-Install-Success
 sudo rm -r enable-manager.sh
 sudo rm -r tomcat-install.sh
