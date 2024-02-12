@@ -97,7 +97,9 @@ sudo sh enable-manager.sh
 # Print instructions
 echo " "
 echo "$LINE_BORDER_SLASH"
+echo " "
 toilet -t -F gay RAGHAVs
+echo " "
 echo " _____                         _          _____           _       _   
 |_   _|                       | |        /  ___|         (_)     | |  
   | | ___  _ __ ___   ___ __ _| |_ ______\ `--.  ___ _ __ _ _ __ | |_ 
@@ -106,13 +108,15 @@ echo " _____                         _          _____           _       _
   \_/\___/|_| |_| |_|\___\__,_|\__|      \____/ \___|_|  |_| .__/ \__|
                                                            | |        
                                                            |_|        "
+echo " "
 echo "$LINE_BORDER_SLASH"
 echo " "
 echo "$LINE_BORDER_HASH"
+echo " "
 echo "_ _  _ ____ ___ ____ _  _ ____ ___ _ ____ _  _ ____ 
 | |\ | [__   |  |__/ |  | |     |  | |  | |\ | [__  
 | | \| ___]  |  |  \ |__| |___  |  | |__| | \| ___] "
-echo ""
+echo " "
 echo "$LINE_BORDER_HASH"
 echo " "
 echo "$LINE_BORDER_EQ"
