@@ -107,3 +107,9 @@ if [ -n "$TOMCAT_USER_PASS" ]; then
 fi
 echo "To start Tomcat, run: tomcat-up"
 echo "To stop Tomcat, run: tomcat-down"
+
+# Removing downloaded shell scripts from /home dir
+cd /home
+echo "Apache Tomcat $TOMCAT_VERSION Installation Completed Successfully"
+sudo rm -r enable-manager.sh
+sudo rm -r tomcat-install.sh
