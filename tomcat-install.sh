@@ -11,6 +11,8 @@ TOMCAT_MANAGER_USER="admin"
 TOMCAT_MANAGER_PASS="admin@1"  # Change this to a secure password
 CUSTOM_TOMCAT_PORT="8080"       # Leave empty to use default port (8080)
 CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
+PUBLIC_IP_ADDR=`curl -s http://whatismyip.akamai.com/`
+BORDER="====================================================================="
 
 # Backup function
 backup_file() {
@@ -102,10 +104,11 @@ echo "_ _  _ ____ ___ ____ _  _ ____ ___ _ ____ _  _ ____
 | | \| ___]  |  |  \ |__| |___  |  | |__| | \| ___] .
                                                      "
 echo " "
+echo "$BORDER"
 echo "1. Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
 echo " "
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
-    echo "2. Tomcat is configured to run on port $CUSTOM_TOMCAT_PORT"
+    echo "2. Tomcat can be access from url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT"
     echo " "
 fi
 if [ -n "$CUSTOM_JDK_VERSION" ]; then
@@ -125,6 +128,7 @@ echo " "
 echo "6. Tomcat Commands:"
 echo "    Run to start the server : tomcat-up"
 echo "    Run to stop the server  : tomcat-down"
+echo "$BORDER"
 
 # Removing downloaded shell scripts from /home dir
 cd /home
