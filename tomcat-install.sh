@@ -9,7 +9,7 @@ TOMCAT_GROUP="tomcat"
 TOMCAT_USER_PASS="tomcat@1"  # Set your desired password or leave empty
 TOMCAT_MANAGER_USER="admin"
 TOMCAT_MANAGER_PASS="admin@1"  # Change this to a secure password
-CUSTOM_TOMCAT_PORT=""       # Leave empty to use default port (8080)
+CUSTOM_TOMCAT_PORT="8080"       # Leave empty to use default port (8080)
 CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 
 # Backup function
@@ -91,25 +91,40 @@ sudo chmod +x enable-manager.sh
 sudo sh enable-manager.sh
 
 # Print instructions
-toilet -t -F gay:border RAGHAVs Tomcat-Script
-figlet -t Instructions:-
-echo "Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
-echo "Tomcat Manager credentials:"
-echo "   Username: $TOMCAT_MANAGER_USER"
-echo "   Password: $TOMCAT_MANAGER_PASS"
+echo" "
+echo " "
+toilet -t -F gay:border RAGHAVs
+figlet -t Tomcat-Script
+echo" "
+echo " "
+echo "_ _  _ ____ ___ ____ _  _ ____ ___ _ ____ _  _ ____  
+| |\ | [__   |  |__/ |  | |     |  | |  | |\ | [__  .
+| | \| ___]  |  |  \ |__| |___  |  | |__| | \| ___] .
+                                                     "
+echo " "
+echo "1. Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
+echo " "
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
-    echo "Tomcat is configured to run on port $CUSTOM_TOMCAT_PORT"
+    echo "2. Tomcat is configured to run on port $CUSTOM_TOMCAT_PORT"
+    echo " "
 fi
 if [ -n "$CUSTOM_JDK_VERSION" ]; then
-    echo "Custom JDK $CUSTOM_JDK_VERSION has been installed"
+    echo "3. Custom JDK $CUSTOM_JDK_VERSION has been installed"
+    echo " "
 fi
-echo "Tomcat user credentials:"
-echo "   Username: $TOMCAT_USER"
+echo "4. Tomcat Manager credentials:"
+echo "       Username: $TOMCAT_MANAGER_USER"
+echo "       Password: $TOMCAT_MANAGER_PASS"
+echo " "
+echo "5. Tomcat user credentials:"
+echo "       Username: $TOMCAT_USER"
 if [ -n "$TOMCAT_USER_PASS" ]; then
-    echo "   Password: $TOMCAT_USER_PASS"
+    echo "       Password: $TOMCAT_USER_PASS"
 fi
-echo "To start Tomcat, run: tomcat-up"
-echo "To stop Tomcat, run: tomcat-down"
+echo " "
+echo "6. Tomcat Commands:"
+echo "    Run to start the server : tomcat-up"
+echo "    Run to stop the server  : tomcat-down"
 
 # Removing downloaded shell scripts from /home dir
 cd /home
