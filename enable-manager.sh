@@ -21,7 +21,3 @@ mv context.xml backup.context.xml
 wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/context.xml/docs.xml
 mv docs.xml context.xml
 echo "Success: File copied to docs dir"
-
-cd /home
-rm -r enable-manager.sh
-rm -r tomcat-install.sh
