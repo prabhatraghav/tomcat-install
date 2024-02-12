@@ -12,7 +12,9 @@ TOMCAT_MANAGER_PASS="admin@1"  # Change this to a secure password
 CUSTOM_TOMCAT_PORT="8080"       # Leave empty to use default port (8080)
 CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 PUBLIC_IP_ADDR=`curl -s http://whatismyip.akamai.com/`
-BORDER="====================================================================="
+LINE_BORDER_EQ="====================================================================="
+LINE_BORDER_SLASH="|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||"
+LINE_BORDER_HASH="######################################################################"
 
 # Backup function
 backup_file() {
@@ -93,18 +95,22 @@ sudo chmod +x enable-manager.sh
 sudo sh enable-manager.sh
 
 # Print instructions
-echo" "
 echo " "
-toilet -t -F gay:border RAGHAVs
+echo "$LINE_BORDER_SLASH"
+toilet -t -F gay RAGHAVs
 figlet -t Tomcat-Script
-echo" "
+echo "$LINE_BORDER_SLASH"
 echo " "
-echo "_ _  _ ____ ___ ____ _  _ ____ ___ _ ____ _  _ ____  
-| |\ | [__   |  |__/ |  | |     |  | |  | |\ | [__  .
-| | \| ___]  |  |  \ |__| |___  |  | |__| | \| ___] .
-                                                     "
+echo "$LINE_BORDER_HASH"
+echo " _____          _                   _   _                 
+|_   _|        | |                 | | (_)                
+  | | _ __  ___| |_ _ __ _   _  ___| |_ _  ___  _ __  ___ 
+  | || '_ \/ __| __| '__| | | |/ __| __| |/ _ \| '_ \/ __|
+ _| || | | \__ \ |_| |  | |_| | (__| |_| | (_) | | | \__ \
+ \___/_| |_|___/\__|_|   \__,_|\___|\__|_|\___/|_| |_|___/"
+echo "$LINE_BORDER_HASH"
 echo " "
-echo "$BORDER"
+echo "$LINE_BORDER_EQ"
 echo "1. Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
 echo " "
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
@@ -128,7 +134,7 @@ echo " "
 echo "6. Tomcat Commands:"
 echo "    Run to start the server : tomcat-up"
 echo "    Run to stop the server  : tomcat-down"
-echo "$BORDER"
+echo "$LINE_BORDER_EQ"
 
 # Removing downloaded shell scripts from /home dir
 cd /home
