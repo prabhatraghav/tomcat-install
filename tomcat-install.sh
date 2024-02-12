@@ -108,9 +108,10 @@ echo " _____          _                   _   _
   | || '_ \/ __| __| '__| | | |/ __| __| |/ _ \| '_ \/ __|
  _| || | | \__ \ |_| |  | |_| | (__| |_| | (_) | | | \__ \
  \___/_| |_|___/\__|_|   \__,_|\___|\__|_|\___/|_| |_|___/"
-echo "$LINE_BORDER_HASH"
 echo " "
+echo "$LINE_BORDER_HASH"
 echo "$LINE_BORDER_EQ"
+echo " "
 echo "1. Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
 echo " "
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
@@ -134,7 +135,9 @@ echo " "
 echo "6. Tomcat Commands:"
 echo "    Run to start the server : tomcat-up"
 echo "    Run to stop the server  : tomcat-down"
+echo " "
 echo "$LINE_BORDER_EQ"
+echo " "
 
 # Removing downloaded shell scripts from /home dir
 cd /home
