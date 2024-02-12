@@ -23,7 +23,8 @@ backup_file() {
 }
 
 # Update and install prerequisites
-sudo apt update
+sudo apt update -y
+sudo apt install toilet -y
 
 # Install custom JDK if specified
 if [ -n "$CUSTOM_JDK_VERSION" ]; then
@@ -90,6 +91,8 @@ sudo chmod +x enable-manager.sh
 sudo sh enable-manager.sh
 
 # Print instructions
+toilet -t -F gay:border RAGHAVs Tomcat-Script
+figlet -t Instructions:-
 echo "Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
 echo "Tomcat Manager credentials:"
 echo "   Username: $TOMCAT_MANAGER_USER"
@@ -110,6 +113,6 @@ echo "To stop Tomcat, run: tomcat-down"
 
 # Removing downloaded shell scripts from /home dir
 cd /home
-echo "Apache Tomcat $TOMCAT_VERSION Installation Completed Successfully"
+figlet -t Tomcat-Install-Success
 sudo rm -r enable-manager.sh
 sudo rm -r tomcat-install.sh
