@@ -96,12 +96,14 @@ sudo sh enable-manager.sh
 # Print instructions
 echo "$LINE_BORDER_SLASH"
 toilet -t -F gay RAGHAVs
-figlet -t Tomcat-Script
+echo "   _   _   _   _   _   _   _   _   _   _   _   _   _  
+  / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
+ ( T | O | M | C | A | T | - | S | C | R | I | P | T )
+  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ "
 echo "$LINE_BORDER_SLASH"
-echo "   _   _   _   _   _   _   _   _   _   _   _   _  
-  / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
- ( I | n | s | t | r | u | c | t | i | o | n | s )
-  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ "
+echo "┳┳┓┏┓┏┳┓┳┓┳┳┏┓┏┳┓┳┏┓┳┓┏┓ 
+┃┃┃┗┓ ┃ ┣┫┃┃┃  ┃ ┃┃┃┃┃┗┓•
+┻┛┗┗┛ ┻ ┛┗┗┛┗┛ ┻ ┻┗┛┛┗┗┛•"
 echo "$LINE_BORDER_EQ"
 echo " "
 echo "1. Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
