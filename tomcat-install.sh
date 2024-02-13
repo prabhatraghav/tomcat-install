@@ -118,7 +118,7 @@ if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
     else echo "2. Tomcat can be accessed from url: http://$PUBLIC_IP_ADDR:8080"
 fi
 if [ -n "$CUSTOM_JDK_VERSION" ]; then
-    echo "3. Custom JDK $CUSTOM_JDK_VERSION has been installed"
+    echo "3. JAVA JDK v$CUSTOM_JDK_VERSION has been installed"
 fi
 echo "4. Tomcat Manager credentials are:"
 echo "     Username: $TOMCAT_MANAGER_USER"
