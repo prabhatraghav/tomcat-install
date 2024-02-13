@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Apache Tomcat Installation Script for Ubuntu 22.04
+# Apache Tomcat Installation Script for Debian/Ubuntu (Tested on Tomcat v8.x.x, v9.x.x, v10.x.x, v11.x.x)
 
-TOMCAT_MAIN_VERSION="11"  # Update the Main-Version if needed (Please update the "Latest-Release" also if you updated the "Main-Version")
-TOMCAT_LATEST_RELEASE="11.0.0-M16"  # Update the latest release version if needed
+TOMCAT_MAIN_VERSION="10"    # Update the Main-Version if needed
+                            # ( * Please update the Tomcat "Latest-Release" and JAVA "JDK-Version" also if you updated the "Main-Version")
+TOMCAT_LATEST_RELEASE="10.1.18"  # Update the latest release version if needed
 TOMCAT_DIR="/opt/tomcat"
 TOMCAT_USER="tomcat"
 TOMCAT_GROUP="tomcat"
