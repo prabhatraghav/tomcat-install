@@ -1,6 +1,6 @@
-# The shell script for the installation of Tomcat Server on Ubuntu/Debian
+# Apache Tomcat Installation Shell-Script for Debian/Ubuntu {Tested on Ubuntu 22.04 LTS with Tomcat v8.x.x, v9.x.x, v10.x.x and v11.x.x-Mxx-(alpha releases) }
 
-# Run the below commands step-wise one-by-one to install the Tomcat Server
+# Run the below commands step-wise (one-by-one) to install the Tomcat Server
 
   # 1. Change dir to /home
     cd /home
