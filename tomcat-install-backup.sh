@@ -2,8 +2,8 @@
 
 # Apache Tomcat Installation Script for Ubuntu 22.04
 
-TOMCAT_MAIN_VERSION="9"  # Update the Main-Version if needed (Please update the "Latest-Release" also if you updated the "Main-Version")
-TOMCAT_LATEST_RELEASE="9.0.85"  # Update the latest release version if needed
+TOMCAT_MAIN_VERSION="8"  # Update the Main-Version if needed (Please update the "Latest-Release" also if you updated the "Main-Version")
+TOMCAT_LATEST_RELEASE="8.5.98"  # Update the latest release version if needed
 TOMCAT_DIR="/opt/tomcat"
 TOMCAT_USER="tomcat"
 TOMCAT_GROUP="tomcat"
