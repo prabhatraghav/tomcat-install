@@ -12,8 +12,8 @@ TOMCAT_MANAGER_PASS=""  # Change this to a strong secure password
 CUSTOM_TOMCAT_PORT=""       # Leave empty to use default port (8080)
 CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 PUBLIC_IP_ADDR=`curl -s http://whatismyip.akamai.com/`
-LINE_BORDER_EQ="=========================================================="
-LINE_BORDER_HASH="###################################################"
+LINE_BORDER_EQ="=================================================================="
+LINE_BORDER_HASH="####################################################################"
 
 # Backup function
 backup_file() {
@@ -108,10 +108,8 @@ echo "$LINE_BORDER_HASH"
 echo " "
 echo "┳  ┳┓  ┏┓  ┏┳┓  ┳┓  ┳┳  ┏┓  ┏┳┓  ┳  ┏┓  ┳┓  ┏┓   
 ┃  ┃┃  ┗┓   ┃   ┣┫  ┃┃  ┃    ┃   ┃  ┃┃  ┃┃  ┗┓  •
-┻  ┛┗  ┗┛   ┻   ┛┗  ┗┛  ┗┛   ┻   ┻  ┗┛  ┛┗  ┗┛  •
-                                                 "
+┻  ┛┗  ┗┛   ┻   ┛┗  ┗┛  ┗┛   ┻   ┻  ┗┛  ┛┗  ┗┛  •"
 echo "$LINE_BORDER_EQ"
-echo " "
 echo "1. Tomcat $TOMCAT_VERSION has been installed to dir $TOMCAT_DIR"
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
     echo "2. Tomcat can be accessed from url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT"
@@ -135,7 +133,6 @@ fi
 echo "6. Tomcat Commands:"
 echo "    Run to start the server : tomcat-up"
 echo "    Run to stop the server  : tomcat-down"
-echo " "
 echo "$LINE_BORDER_EQ"
 
 # Removing downloaded shell scripts from /home dir
