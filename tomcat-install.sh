@@ -107,29 +107,23 @@ echo " "
 echo "$LINE_BORDER_EQ"
 echo " "
 echo "1. Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
-echo " "
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
     echo "2. Tomcat can be access from url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT"
-    echo " "
 fi
 if [ -n "$CUSTOM_JDK_VERSION" ]; then
     echo "3. Custom JDK $CUSTOM_JDK_VERSION has been installed"
-    echo " "
 fi
 echo "4. Tomcat Manager credentials:"
 echo "       Username: $TOMCAT_MANAGER_USER"
 echo "       Password: $TOMCAT_MANAGER_PASS"
-echo " "
 echo "5. Tomcat user credentials:"
 echo "       Username: $TOMCAT_USER"
 if [ -n "$TOMCAT_USER_PASS" ]; then
     echo "       Password: $TOMCAT_USER_PASS"
 fi
-echo " "
 echo "6. Tomcat Commands:"
 echo "    Run to start the server : tomcat-up"
 echo "    Run to stop the server  : tomcat-down"
-echo " "
 echo "$LINE_BORDER_EQ"
 echo " "
 
