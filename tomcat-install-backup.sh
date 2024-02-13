@@ -2,7 +2,8 @@
 
 # Apache Tomcat Installation Script for Ubuntu 22.04
 
-TOMCAT_VERSION="10.0.18"  # Update the version as needed
+TOMCAT_MAIN_VERSION="10"  # Update the Main-Version if needed (Please update the "Latest-Release" also if you updated the "Main-Version")
+TOMCAT_LATEST_RELEASE="10.0.18"  # Update the latest release version if needed
 TOMCAT_DIR="/opt/tomcat"
 TOMCAT_USER="tomcat"
 TOMCAT_GROUP="tomcat"
@@ -47,9 +48,9 @@ fi
 
 # Download and extract Apache Tomcat
 cd /tmp
-wget https://archive.apache.org/dist/tomcat/tomcat-10/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz
+wget https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAIN_VERSION}/v${TOMCAT_LATEST_RELEASE}/bin/apache-tomcat-${TOMCAT_LATEST_RELEASE}.tar.gz
 sudo mkdir -p $TOMCAT_DIR
-sudo tar -xf apache-tomcat-${TOMCAT_VERSION}.tar.gz -C $TOMCAT_DIR --strip-components=1
+sudo tar -xf apache-tomcat-${TOMCAT_LATEST_RELEASE}.tar.gz -C $TOMCAT_DIR --strip-components=1
 
 # Set permissions and create backups
 backup_file "$TOMCAT_DIR/conf/server.xml"
@@ -85,7 +86,7 @@ echo "sudo -u $TOMCAT_USER $TOMCAT_DIR/bin/shutdown.sh" | sudo tee -a /usr/local
 sudo chmod +x /usr/local/bin/tomcat-down
 
 # Clean up
-rm /tmp/apache-tomcat-${TOMCAT_VERSION}.tar.gz
+rm /tmp/apache-tomcat-${TOMCAT_LATEST_RELEASE}.tar.gz
 
 # To enable Tomcat Manager, replacing the context.xml files
 cd /home
@@ -110,7 +111,7 @@ echo "┳  ┳┓  ┏┓  ┏┳┓  ┳┓  ┳┳  ┏┓  ┏┳┓  ┳  �
 ┃  ┃┃  ┗┓   ┃   ┣┫  ┃┃  ┃    ┃   ┃  ┃┃  ┃┃  ┗┓  •
 ┻  ┛┗  ┗┛   ┻   ┛┗  ┗┛  ┗┛   ┻   ┻  ┗┛  ┛┗  ┗┛  •"
 echo "$LINE_BORDER_EQ"
-echo "1. Tomcat $TOMCAT_VERSION has been installed to dir $TOMCAT_DIR"
+echo "1. Tomcat $TOMCAT_LATEST_RELEASE has been installed to dir $TOMCAT_DIR"
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
     echo "2. Tomcat can be accessed from url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT"
     else echo "2. Tomcat can be accessed from url: http://$PUBLIC_IP_ADDR:8080"
