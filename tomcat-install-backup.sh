@@ -6,13 +6,13 @@ TOMCAT_VERSION="10.0.18"  # Update the version as needed
 TOMCAT_DIR="/opt/tomcat"
 TOMCAT_USER="tomcat"
 TOMCAT_GROUP="tomcat"
-TOMCAT_USER_PASS=""  # Set your desired password or leave empty
+TOMCAT_USER_PASS="tomcat"  # Set your desired password or leave empty
 TOMCAT_MANAGER_USER="admin"
-TOMCAT_MANAGER_PASS=""  # Change this to a strong secure password
+TOMCAT_MANAGER_PASS="admin"  # Change this to a strong secure password
 CUSTOM_TOMCAT_PORT=""       # Leave empty to use default port (8080)
 CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 PUBLIC_IP_ADDR=`curl -s http://whatismyip.akamai.com/`
-LINE_BORDER_EQ="=================================================================="
+LINE_BORDER_EQ="==========================================================="
 LINE_BORDER_HASH="####################################################################"
 
 # Backup function
