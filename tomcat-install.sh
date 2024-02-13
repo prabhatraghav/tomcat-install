@@ -14,7 +14,6 @@ CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 PUBLIC_IP_ADDR=`curl -s http://whatismyip.akamai.com/`
 LINE_BORDER_EQ="========================================================================"
 LINE_BORDER_SLASH="|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||"
-LINE_BORDER_HASH="######################################################################"
 
 # Backup function
 backup_file() {
@@ -100,13 +99,11 @@ echo "$LINE_BORDER_SLASH"
 toilet -t -F gay RAGHAVs
 figlet -t Tomcat-Script
 echo "$LINE_BORDER_SLASH"
-echo " "
-echo "$LINE_BORDER_HASH"
 echo "   _   _   _   _   _   _   _   _   _   _   _   _  
   / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
  ( I | n | s | t | r | u | c | t | i | o | n | s )
   \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ "
-echo "$LINE_BORDER_HASH"
+echo " "
 echo "$LINE_BORDER_EQ"
 echo " "
 echo "1. Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
