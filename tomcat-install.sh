@@ -12,8 +12,8 @@ TOMCAT_MANAGER_PASS="admin@1"  # Change this to a secure password
 CUSTOM_TOMCAT_PORT="8080"       # Leave empty to use default port (8080)
 CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 PUBLIC_IP_ADDR=`curl -s http://whatismyip.akamai.com/`
-LINE_BORDER_EQ="========================================================================"
-LINE_BORDER_SLASH="|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||///|||\\\|||"
+LINE_BORDER_EQ="=========================================================="
+LINE_BORDER_HASH="############################################"
 
 # Backup function
 backup_file() {
@@ -94,13 +94,15 @@ sudo chmod +x enable-manager.sh
 sudo sh enable-manager.sh
 
 # Print instructions
-echo "$LINE_BORDER_SLASH"
+echo " "
+echo "$LINE_BORDER_HASH"
 toilet -t -F gay RAGHAVs
+echo "$LINE_BORDER_HASH"
 echo "   _   _   _   _   _   _   _   _   _   _   _   _   _  
   / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
  ( T | O | M | C | A | T | - | S | C | R | I | P | T )
   \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ "
-echo "$LINE_BORDER_SLASH"
+echo "$LINE_BORDER_EQ"
 echo "┳┳┓┏┓┏┳┓┳┓┳┳┏┓┏┳┓┳┏┓┳┓┏┓ 
 ┃┃┃┗┓ ┃ ┣┫┃┃┃  ┃ ┃┃┃┃┃┗┓•
 ┻┛┗┗┛ ┻ ┛┗┗┛┗┛ ┻ ┻┗┛┛┗┗┛•"
