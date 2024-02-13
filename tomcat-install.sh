@@ -94,7 +94,6 @@ sudo chmod +x enable-manager.sh
 sudo sh enable-manager.sh
 
 # Print instructions
-echo " "
 echo "$LINE_BORDER_SLASH"
 toilet -t -F gay RAGHAVs
 figlet -t Tomcat-Script
@@ -103,7 +102,6 @@ echo "   _   _   _   _   _   _   _   _   _   _   _   _
   / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
  ( I | n | s | t | r | u | c | t | i | o | n | s )
   \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ "
-echo " "
 echo "$LINE_BORDER_EQ"
 echo " "
 echo "1. Apache Tomcat $TOMCAT_VERSION has been installed to $TOMCAT_DIR"
@@ -124,8 +122,8 @@ fi
 echo "6. Tomcat Commands:"
 echo "    Run to start the server : tomcat-up"
 echo "    Run to stop the server  : tomcat-down"
-echo "$LINE_BORDER_EQ"
 echo " "
+echo "$LINE_BORDER_EQ"
 
 # Removing downloaded shell scripts from /home dir
 cd /home
