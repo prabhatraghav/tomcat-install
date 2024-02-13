@@ -8,7 +8,7 @@ TOMCAT_USER="tomcat"
 TOMCAT_GROUP="tomcat"
 TOMCAT_USER_PASS=""  # Set your desired password or leave empty
 TOMCAT_MANAGER_USER="admin"
-TOMCAT_MANAGER_PASS="admin@1"  # Change this to a strong secure password
+TOMCAT_MANAGER_PASS=""  # Change this to a strong secure password
 CUSTOM_TOMCAT_PORT=""       # Leave empty to use default port (8080)
 CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 PUBLIC_IP_ADDR=`curl -s http://whatismyip.akamai.com/`
@@ -96,15 +96,16 @@ sudo sh enable-manager.sh
 # Print instructions
 echo " "
 echo "$LINE_BORDER_HASH"
-toilet -t -F gay RAGHAVs
 echo "   _   _   _   _   _   _   _   _   _   _   _   _   _  
   / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
+ ( P | R | A | B | H | A | T | R | A | G | H | A | V )
+  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ "
+echo "  / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
  ( T | O | M | C | A | T | - | S | C | R | I | P | T )
   \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ "
-echo "$LINE_BORDER_HASH"
-echo "┳┳┓┏┓┏┳┓┳┓┳┳┏┓┏┳┓┳┏┓┳┓┏┓ 
-┃┃┃┗┓ ┃ ┣┫┃┃┃  ┃ ┃┃┃┃┃┗┓•
-┻┛┗┗┛ ┻ ┛┗┗┛┗┛ ┻ ┻┗┛┛┗┗┛•"
+echo "  / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
+ ( I | N | S | T | R | U | C | T | I | O | N | S | : )
+  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ "
 echo "$LINE_BORDER_EQ"
 echo " "
 echo "1. Tomcat $TOMCAT_VERSION has been installed to dir $TOMCAT_DIR"
@@ -116,13 +117,16 @@ if [ -n "$CUSTOM_JDK_VERSION" ]; then
     echo "3. Custom JDK $CUSTOM_JDK_VERSION has been installed"
 fi
 echo "4. Tomcat Manager credentials are:"
-echo "       Username: $TOMCAT_MANAGER_USER"
-echo "       Password: $TOMCAT_MANAGER_PASS"
+echo "     Username: $TOMCAT_MANAGER_USER"
+if [ -n "$TOMCAT_MANAGER_PASS" ]; then
+    echo "     Password: $TOMCAT_MANAGER_PASS"
+    else echo "     Password: *Not Configured* (Please configure strong secure password)"
+fi
 echo "5. Tomcat user credentials:"
-echo "       Username: $TOMCAT_USER"
+echo "     Username: $TOMCAT_USER"
 if [ -n "$TOMCAT_USER_PASS" ]; then
-    echo "       Password: $TOMCAT_USER_PASS"
-    else echo "       Password: **Not Configured**"
+    echo "     Password: $TOMCAT_USER_PASS"
+    else echo "     Password: **Not Configured**"
 fi
 echo "6. Tomcat Commands:"
 echo "    Run to start the server : tomcat-up"
