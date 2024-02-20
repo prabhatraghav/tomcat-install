@@ -142,3 +142,4 @@ cd /home
 sudo rm -r enable-manager.sh
 sudo rm -r tomcat-install.sh
 sudo tomcat-up
+echo -e "\e[0;32mTomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT\e[0m"
