@@ -114,8 +114,8 @@ echo "┳  ┳┓  ┏┓  ┏┳┓  ┳┓  ┳┳  ┏┓  ┏┳┓  ┳  �
 echo "$LINE_BORDER_EQ"
 echo "1. Tomcat $TOMCAT_LATEST_RELEASE has been installed to dir $TOMCAT_DIR"
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
-    echo "2. Tomcat can be accessed from url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT"
-    else echo "2. Tomcat can be accessed from url: http://$PUBLIC_IP_ADDR:8080"
+    echo "2. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT"
+    else echo "2. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:8080"
 fi
 if [ -n "$CUSTOM_JDK_VERSION" ]; then
     echo "3. JAVA JDK v$CUSTOM_JDK_VERSION has been installed"
@@ -141,3 +141,4 @@ echo "$LINE_BORDER_EQ"
 cd /home
 sudo rm -r enable-manager.sh
 sudo rm -r tomcat-install.sh
+sudo tomcat-up
