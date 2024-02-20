@@ -113,12 +113,14 @@ echo "┳  ┳┓  ┏┓  ┏┳┓  ┳┓  ┳┳  ┏┓  ┏┳┓  ┳  �
 ┻  ┛┗  ┗┛   ┻   ┛┗  ┗┛  ┗┛   ┻   ┻  ┗┛  ┛┗  ┗┛  •"
 echo "$LINE_BORDER_EQ"
 echo "1. Tomcat $TOMCAT_LATEST_RELEASE has been installed to dir $TOMCAT_DIR"
-if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
-    echo -e "\e[0;32m2. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT\e[0m"
-    else echo -e "\e[0;32m2. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:8080\e[0m"
-fi
 if [ -n "$CUSTOM_JDK_VERSION" ]; then
-    echo "3. JAVA JDK v$CUSTOM_JDK_VERSION has been installed"
+    echo "2. JAVA JDK v$CUSTOM_JDK_VERSION has been installed"
+fi
+echo "3. Tomcat user credentials:"
+echo "     Username: $TOMCAT_USER"
+if [ -n "$TOMCAT_USER_PASS" ]; then
+    echo "     Password: $TOMCAT_USER_PASS"
+    else echo "     Password: **Not Configured**"
 fi
 echo "4. Tomcat Manager credentials are:"
 echo "     Username: $TOMCAT_MANAGER_USER"
@@ -126,15 +128,13 @@ if [ -n "$TOMCAT_MANAGER_PASS" ]; then
     echo "     Password: $TOMCAT_MANAGER_PASS"
     else echo "     Password: *Not Configured* (Please configure strong secure password)"
 fi
-echo "5. Tomcat user credentials:"
-echo "     Username: $TOMCAT_USER"
-if [ -n "$TOMCAT_USER_PASS" ]; then
-    echo "     Password: $TOMCAT_USER_PASS"
-    else echo "     Password: **Not Configured**"
-fi
-echo "6. Tomcat Commands:"
+echo "5. Tomcat Commands:"
 echo "    Run to start the server : tomcat-up"
 echo "    Run to stop the server  : tomcat-down"
+if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
+    echo -e "\e[0;32m6. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT\e[0m"
+    else echo -e "\e[0;32m6. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:8080\e[0m"
+fi
 echo "$LINE_BORDER_EQ"
 
 # Removing downloaded shell scripts from /home dir
@@ -142,4 +142,3 @@ cd /home
 sudo rm -r enable-manager.sh
 sudo rm -r tomcat-install.sh
 sudo tomcat-up
-echo -e "\e[0;32mTomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT\e[0m"
