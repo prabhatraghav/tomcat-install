@@ -132,8 +132,8 @@ echo "5. Tomcat Run Commands are:"
 echo "    To start the server : tomcat-up"
 echo "    To stop the server  : tomcat-down"
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
-    echo -e "\e[0;32m6. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT\e[0m"
-    else echo -e "\e[0;32m6. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:8080\e[0m"
+    echo -e "\e[1;32m6. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT\e[0m"
+    else echo -e "\e[1;32m6. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:8080\e[0m"
 fi
 echo "$LINE_BORDER_EQ"
 
