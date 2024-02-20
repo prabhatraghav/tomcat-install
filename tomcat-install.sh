@@ -116,7 +116,7 @@ echo "1. Tomcat $TOMCAT_LATEST_RELEASE has been installed to dir $TOMCAT_DIR"
 if [ -n "$CUSTOM_JDK_VERSION" ]; then
     echo "2. JAVA JDK v$CUSTOM_JDK_VERSION has been installed"
 fi
-echo "3. Tomcat user credentials:"
+echo "3. Tomcat user credentials are:"
 echo "     Username: $TOMCAT_USER"
 if [ -n "$TOMCAT_USER_PASS" ]; then
     echo "     Password: $TOMCAT_USER_PASS"
@@ -128,9 +128,9 @@ if [ -n "$TOMCAT_MANAGER_PASS" ]; then
     echo "     Password: $TOMCAT_MANAGER_PASS"
     else echo "     Password: *Not Configured* (Please configure strong secure password)"
 fi
-echo "5. Tomcat Commands:"
-echo "    Run to start the server : tomcat-up"
-echo "    Run to stop the server  : tomcat-down"
+echo "5. Tomcat Run Commands are:"
+echo "    To start the server : tomcat-up"
+echo "    To stop the server  : tomcat-down"
 if [ -n "$CUSTOM_TOMCAT_PORT" ]; then
     echo -e "\e[0;32m6. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:$CUSTOM_TOMCAT_PORT\e[0m"
     else echo -e "\e[0;32m6. Tomcat is Up & Running on url: http://$PUBLIC_IP_ADDR:8080\e[0m"
