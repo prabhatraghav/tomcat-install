@@ -139,6 +139,7 @@ echo "$LINE_BORDER_EQ"
 
 # Removing downloaded shell scripts from /home dir
 cd /home
+sudo wget https://raw.githubusercontent.com/prabhatraghav/tomcat-install/main/tomcat-remove.sh
 sudo rm -r enable-manager.sh
 sudo rm -r tomcat-install.sh
 sudo tomcat-up
