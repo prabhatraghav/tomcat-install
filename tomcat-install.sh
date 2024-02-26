@@ -6,6 +6,7 @@ TOMCAT_MAIN_VERSION="10"    # Update the Main-Version if needed
                             # ( * Please update the Tomcat "Latest-Release" and JAVA "JDK-Version" also if you updated the "Main-Version")
 TOMCAT_LATEST_RELEASE="10.1.18"     # Update the latest release version if needed
                                     # (Stable releases/JDK version: 10.1.19/JDK-11, 10.0.27/JDK-8, 9.0.86/JDK-8, 8.5.99/JDK-7 & 11.0.0-M17/JDK-21)
+CUSTOM_JDK_VERSION="11"       # Leave empty to use default JDK
 TOMCAT_DIR="/opt/tomcat"
 TOMCAT_USER="tomcat"
 TOMCAT_GROUP="tomcat"
@@ -13,7 +14,6 @@ TOMCAT_USER_PASS="tomcat"  # Set your desired password or leave empty
 TOMCAT_MANAGER_USER="admin"
 TOMCAT_MANAGER_PASS="admin"  # Change this to a strong secure password
 CUSTOM_TOMCAT_PORT=""       # Leave empty to use default port (8080)
-CUSTOM_JDK_VERSION="17"       # Leave empty to use default JDK
 PUBLIC_IP_ADDR=`curl -s http://whatismyip.akamai.com/`
 LINE_BORDER_EQ="==========================================================="
 LINE_BORDER_HASH="####################################################################"
