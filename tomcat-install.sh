@@ -4,7 +4,7 @@
 
 TOMCAT_MAIN_VERSION="10"    # Update the Main-Version if needed
                             # ( * Please update the Tomcat "Latest-Release" and JAVA "JDK-Version" also if you updated the "Main-Version")
-TOMCAT_LATEST_RELEASE="10.1.18"  # Update the latest release version if needed
+TOMCAT_LATEST_RELEASE="10.1.18"  # Update the latest release version if needed (Stable releases: 10.1.19, 9.0.86, 8.5.99 & 11.0.0-M17)
 TOMCAT_DIR="/opt/tomcat"
 TOMCAT_USER="tomcat"
 TOMCAT_GROUP="tomcat"
