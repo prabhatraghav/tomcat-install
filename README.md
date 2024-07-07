@@ -12,7 +12,8 @@
   
   # Edit the script
   * (Skip this step if you want to install with default settings)
-    sudo nano tomcat-install.sh
+
+        sudo nano tomcat-install.sh
 
   # 3. Make it executable
     sudo chmod +x tomcat-install.sh
