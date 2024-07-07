@@ -21,7 +21,7 @@
   # 4. Run the script
     sudo sh tomcat-install.sh
 
-# Please read the instructions carefully, echoed on the screen at the end of this script, and save the tomcat-user and manager passwords.
+* Please read the instructions carefully, echoed on the screen at the end of this script, and save the tomcat-user and manager passwords.
 
 # 5. Use the command to start the Tomcat
     tomcat-up
